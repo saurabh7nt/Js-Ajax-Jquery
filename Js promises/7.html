@@ -1,0 +1,30 @@
+<script>
+
+async function weather(){
+    let delhiWeather = new Promise((resolve,reject)=>{
+        setTimeout(()=>{
+            resolve("27 deg")
+        },2000)
+    })
+    let mumbaiWeather = new Promise((resolve,reject)=>{
+        setTimeout(()=>{
+            resolve("34 deg")
+        },5000)
+    })
+                    // delhiWeather.then((value)=>{
+                    //     console.log(value);
+                    // })
+                    // mumbaiWeather.then((value)=>{
+                    //     console.log(value);
+                    // })
+    console.log("before loading delhi's weather.");
+    let d = await delhiWeather;
+    console.log("delhi's weather loaded.");
+    console.log("before loading mumbai's weather.");
+    let m = await mumbaiWeather;
+    console.log("mumbai's weather loaded.");
+    return[d,m];
+} 
+const a = weather();
+// console.log(a);
+</script>

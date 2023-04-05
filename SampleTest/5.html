@@ -1,0 +1,25 @@
+<!-- 5. Create a function(name myfunc() ) and pass 2 value having number 10 &20, do the multiplication & -->
+<!--  show the result in console. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <input type="text" id="x1">
+        <input type="text" id="x2">
+        <button onclick="myFun()">Calculate</button>
+</body>
+</html>
+
+<script>
+        function myFun(){
+            let x = document.querySelector("#x1").value;
+            let y = document.querySelector("#x2").value;
+            console.log(x*y);
+        }
+</script>

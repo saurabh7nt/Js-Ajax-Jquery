@@ -1,0 +1,16 @@
+<!-- filter()
+    -this method will return you the array of the newly satisfied elements
+    -function will check the condition .. after checking the returned values will be 
+    stored inside another array. 
+-->
+<script>
+
+    let x = [10,20,30,40,50];
+    document.write(x+"</br>")
+    let y = x.filter(check);
+    document.write(y);
+    function check(ch){
+        return ch >= 30;
+    }
+    
+</script>

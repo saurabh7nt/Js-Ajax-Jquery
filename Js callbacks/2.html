@@ -1,0 +1,16 @@
+<html>
+    <head></head>
+    <body>
+        <h3>Time : </h3>
+        <h1></h1>
+    </body>
+</html>
+<script>
+    function fun(){
+        let d = new Date();
+        document.querySelector("h1").innerHTML = d.getHours() + ":" + d.getMinutes() + ":"  
+        + d.getSeconds();
+       // console.log(d.getHours() + ":" + d.getMinutes() + ":" + d.getSeconds()) 
+    }
+    setInterval(fun,1000);
+</script>

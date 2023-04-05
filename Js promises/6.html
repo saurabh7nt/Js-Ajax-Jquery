@@ -1,0 +1,24 @@
+<script>
+
+    let x = new Promise((resolve,reject)=>{
+        setTimeout(()=>{
+            resolve("hum saath saath hai")
+        },2000)
+    })
+    let x1 = new Promise((resolve,reject)=>{
+        setTimeout(()=>{
+            resolve("hum saath saath hai")
+        },1000)
+    })
+    let x2 = new Promise((resolve,reject)=>{
+        setTimeout(()=>{
+            resolve("hum saath saath hai")
+        },1000)
+    })
+
+    let xAll = Promise.all([x,x1,x2])
+    xAll.then((value)=>{
+        console.log(value);
+    })
+    
+</script>

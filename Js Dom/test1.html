@@ -1,0 +1,83 @@
+<!-- <button onclick="myFun()">ENTEr</button>
+
+<script>
+    function myFun(){
+        console.log("hrllo");
+    }
+</script> -->
+
+<!-- this keyword -->
+
+<!-- <button onclick="fun1(this)">Click me to see change</button>
+<p onclick="fun1(this)">Euuuuuuuuuuuuuuuuuuuu</p>
+
+<script>
+    function fun1(var1){
+        console.log(var1);
+        console.log(typeof var1);
+        var1.innerHTML = "Change occurs";
+    }
+</script> -->
+
+<!-- event keyword -->
+
+<!-- <button onclick="fun1(this, event)">Euuuuu</button>
+
+<script>
+    function fun1(x, y){
+        // x.innerHTML = "change occurs";
+        // console.log(x);
+        console.log(y);
+        console.log(typeof y);
+        y.target.innerHTML = "hello";
+    }
+</script> -->
+
+<!-- event bubbling -->
+
+<!-- <div onclick="myfun1(this,event)" style="border: solid;">
+    <p onclick="myfun2(this, event)">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quae consectetur atque error vitae! Quis deserunt maiores amet sit nostrum! Nobis, laudantium nulla! Quas commodi aut, impedit perferendis vero libero dolores.</p>
+</div>
+
+<script>
+    function myfun1(x,y){
+        console.log(y);
+        console.log(typeof y);
+    }
+    function myfun2(x,y){
+        console.log(y);
+        console.log(typeof y);
+        y.cancelBubble = true;
+    }
+</script> -->
+
+<!-- alert box -->
+
+<!-- <p>
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa voluptates, obcaecati harum saepe, adipisci placeat commodi perferendis voluptas magni in accusamus voluptatum nihil, dignissimos inventore odio consectetur. Doloremque, eius error.
+</p>
+
+<script>
+    alert("simon go back");
+</script> -->
+
+<!-- confirm box -->
+
+<!-- <script>
+   ans = confirm("You want to logout?");
+   if(ans)
+   {
+    console.log("Loggedout");
+   }
+   else{
+    console.log("try again");
+   }
+</script> -->
+
+<!-- prompt box -->
+
+<!-- <script>
+    ans = prompt();
+    console.log(ans);
+</script> -->
+

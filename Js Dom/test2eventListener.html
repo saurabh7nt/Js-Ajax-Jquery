@@ -1,0 +1,25 @@
+<html>
+    <head></head>
+    <body>
+        <button onclick="Add()">Add Event</button>
+        <button onclick="Remove()">Remove Event</button>
+        <p id="para">para</p>
+    </body>
+</html>
+
+<script>
+    function Add(){
+       // console.log("success");
+       para = document.querySelector("#para");
+       console.log(para);
+        para.addEventListener("mouseover", function(){
+            console.log("mouse over called");
+        })
+        para.addEventListener("mouseout", fun)
+        function fun()
+        {
+            console.log("mouse out gets called");
+        }
+    }
+
+</script>

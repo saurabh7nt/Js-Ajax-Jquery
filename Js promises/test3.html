@@ -1,0 +1,34 @@
+<script>
+    let x1 = new Promise((resolve,reject)=>{
+        setTimeout(()=>{
+            resolve("first promise has been fulfilled");
+        },2000)
+    })
+    x1.then((value)=>{
+        console.log(value);
+        let x2 = new Promise((resolve,reject)=>{
+            setTimeout(()=>{
+                resolve("Second promise has also been fulfilled.")
+            },2000)
+        })
+        return x2;
+    }).then((value)=>{
+        console.log(value);
+        let x3 = new Promise((resolve,reject)=>{
+            setTimeout(()=>{
+                resolve("Third promise fulfilled")
+            },2000)
+        })
+        return x3
+    }).then((value)=>{
+        console.log(value);
+        let x4 = new Promise((resolve,reject)=>{
+            setTimeout(()=>{
+                resolve("Last promise vi pura kar diyaaa vaaaiii...")
+            },2000)
+        })
+        return x4;
+    }).then((value)=>{
+        console.log(value);
+    })
+</script>

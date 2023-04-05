@@ -1,0 +1,63 @@
+Callback functions :
+
+- Callback function is a function which is passed as a argument to another function.
+- Make sure whenever youre passing a callback function as a argument then dont pass it 
+  with having paranthesis. (no paranthesis required)
+- Its mostly use when one function has to wait for other function to load or to complete 
+  task.
+
+Example :
+        function myDisplayer(something) {
+        document.getElementById("demo").innerHTML = something;
+        }
+
+        function myCalculator(num1, num2, myCallback) {
+        let sum = num1 + num2;
+        myCallback(sum);
+        }
+
+        myCalculator(5, 5, myDisplayer);    
+
+- In the real world, callbacks are most often used with asynchronous functions.
+  A typical example is JavaScript setTimeout().
+
+Example :
+        setTimeout(myFunction, 3000);
+
+        function myFunction() {
+        document.getElementById("demo").innerHTML = "I me myself !!";
+        }
+
+(In the example above, myFunction is used as a callback.
+myFunction is passed to setTimeout() as an argument.
+3000 is the number of milliseconds before time-out, so myFunction() will be called after 3 seconds.)
+
+- Instead of passing the name of a function as an argument to another function, you can always pass a whole function instead:
+
+Example :
+        setTimeout(function() { myFunction("he he he !!!"); }, 3000);
+
+        function myFunction(value) {
+        document.getElementById("demo").innerHTML = value;
+        }
+
+(In the example above, function(){ myFunction("he he he !!!"); } is used as a callback. It is a complete function. The complete function is passed to setTimeout() as an argument.
+3000 is the number of milliseconds before time-out, so myFunction() will be called after 3 seconds.)
+
+>>>>>>>> Waiting for Intervals: <<<<<<<<<
+
+When using the JavaScript function setInterval(), you can specify a callback function to be executed for each interval:
+
+Example:
+        setInterval(myFunction, 1000);
+
+        function myFunction() {
+        let d = new Date();
+        document.getElementById("demo").innerHTML=
+        d.getHours() + ":" +
+        d.getMinutes() + ":" +
+        d.getSeconds();
+        }
+(In the example above, myFunction is used as a callback.
+myFunction is passed to setInterval() as an argument.
+1000 is the number of milliseconds between intervals, so myFunction() will be called every second.)

@@ -1,0 +1,40 @@
+<!-- -->
+<script>
+
+ let p = new Promise((resolve,reject)=>{
+    setTimeout(() => {
+        resolve("promise fulfilled");
+    }, 3000);
+ })
+
+ let q = new Promise((resolve,reject)=>{
+    setTimeout(()=>{
+        resolve("2nd promise also get fulfilled");
+    }, 5000)
+ })
+
+ async function fun(){
+    console.log("waiting for 1st promise to fulfilled.");
+    let result = await p;
+    console.log(result);
+    console.log("done");
+    console.log("waiting for 2nd promise to fulfilled.");
+    let result1 = await q;
+    console.log(result1);
+    console.log("hurrray...");
+ }
+
+// function fun(){
+//     console.log("waiting for 1st promise to fulfilled.");
+//     let result =  p;
+//     console.log(result);
+//     console.log("done");
+//     console.log("waiting for 2nd promise to fulfilled.");
+//     let result1 =  q;
+//     console.log(result1);
+//     console.log("hurrray...");
+//  }
+
+
+ fun();
+</script>

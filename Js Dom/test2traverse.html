@@ -1,0 +1,26 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <div style="border:solid 2px green; padding: 20px">
+            <ul style="border: 2px solid red">
+                <li>hey</li>
+                <li onclick="fun(this)">click me to see the change</li>
+                <li>hey</li>
+                <li>hey</li>
+            </ul>
+        </div>
+    </body>
+</html>
+
+<script>
+    fun = function(ele){
+        console.log(ele);
+        ele.nextElementSibling.innerHTML = "<i>hello</i>";
+        ele.previousElementSibling.innerHTML = "<b>hello</b>";
+        ele.parentNode.style.border="4px solid red";
+        ele.parentNode.parentNode.style.border="4px solid green";
+
+    }
+</script>

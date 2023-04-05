@@ -1,0 +1,35 @@
+<script>
+        let x =  `[                                     
+            {
+                "name" : "Saurabh",
+                "age" : 24,
+                "city" : "Nashik",
+                "designation" : "Full stack developer"
+            },
+            {
+                "name" : "Saurabh",
+                "age" : 24,
+                "city" : "vice city",
+                "designation" : "Photographer"
+            }
+        ]`
+        console.log(x);
+        console.log(JSON.parse(x));
+        let y = JSON.stringify(x);
+        console.log(typeof y);
+</script>
+
+<!-- back ticks are used to create a string in Js -->
+<!-- here JSON.parse will convert string to object-->
+<!-- json is lightweight and easy to read syntax for
+    storing and transporting data -->
+<!-- you can use following data types in JSON 
+    1. number
+    2. string
+    3. boolean
+    4. null
+    5. object
+    6. array    -->
+<!-- you cannot use function date and undefined in JSON -->
+<!-- JSON.parse() method is use to convert string to object -->
+<!-- JSON.stringify is used to convert object to string -->

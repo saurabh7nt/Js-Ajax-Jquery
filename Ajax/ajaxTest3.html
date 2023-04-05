@@ -1,0 +1,25 @@
+<html>
+    <head></head>
+    <body>
+        <h2>Changing the content of the paragraph with the help of Ajax.</h2>
+        <button onclick="fun()">click</button>
+        <p style="border: 2px solid; text-align: justify;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga mollitia eius animi ab odit in, rem est autem tenetur possimus inventore sint amet facere? At corrupti quo iusto vitae consectetur?</p>
+    </body>
+</html>
+
+<script>
+   function fun(){
+    let xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function(){
+        if(this.status == 200 && this.readyState == 4){
+            console.log("working");
+            document.querySelector("p").innerText = this.responseText;
+        }else{
+            document.querySelector("p").innerText = "File not found.";
+        }
+    }
+    xhttp.open("GET","text3.txt", true);
+    xhttp.send();
+   }
+    
+</script>

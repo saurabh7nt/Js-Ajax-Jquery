@@ -1,0 +1,25 @@
+<!-- const variable with array and objects
+     -if you assign array or object with a const varible then you cannot reinitialized it 
+     -but you can change the inner properties of it.
+-->
+
+<script>
+    const x = [10,20,30];
+    // x = [10,29,39];
+    x[0]=39;
+    x[1]=69;
+    
+    console.log(x);
+
+    const y = {
+        name : "sau",
+        age : 34,
+    }
+    // y = {
+    //     name : "sau",
+    //     age : 34,
+    // }
+    y.name = "bhobho";
+    console.log(y);
+
+</script>

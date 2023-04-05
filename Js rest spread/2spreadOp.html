@@ -1,0 +1,45 @@
+<script>
+
+    // function sum(name,...value){
+    //     let sum = 0;
+    //     for(let i in value){
+    //         sum += value[i];
+    //     }
+    //     console.log(`The total marks of ${name} is ${sum}`);
+    // }
+    // sum("saurabh",20,30,40)
+    
+
+    function sum(name,...value){
+        let sum = 0;
+        for(let i in value){
+            sum += value[i];
+        }
+        console.log(`The total marks of ${name} is ${sum}`);
+    }
+    let x = [20,30,40]; 
+    sum("saurabh",...x); //here spread operator will break the arr into each single element
+
+    
+    // to concatenate arrays by using spread operator
+    // let x = [10,20,30];
+    // let y = [40,50];
+    // let z = [...x, ...y]
+    // // let z = [0,...x, ...y,60,70]; //you can also add elements in array like this
+    // console.log(z);
+
+    
+    //to merge objects by using spread operator
+    // let obj1 = {
+    //     name : "saurabh",
+    //     place : "nashik"
+    // }
+    // let obj2 = {
+    //     salary : "undefined",
+    //     desg : "full-stack dev"
+    // }
+
+    // let obj3 = {...obj1,...obj2};
+    // console.log(obj3)
+
+</script>

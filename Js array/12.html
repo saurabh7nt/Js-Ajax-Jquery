@@ -1,0 +1,21 @@
+<!-- find() & findIndex()
+    -find method will return you the first occurance of that condition satisfied element
+    -findIndex() method will return you the index of that element
+    
+    -you have to create a function for checking the condition 
+-->
+
+<script>
+
+    let x = [10,20,30,40,50,20];
+    let a = x.find(check);
+    document.write(a+"</br>");
+    let b = x.findIndex(check);
+    document.write(b);
+
+    function check(ch){
+        return ch >= 18;
+    }
+
+
+</script>

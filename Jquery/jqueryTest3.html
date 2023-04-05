@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+        <body>
+            <p>Click button to hide or show the paragraph</p>
+            <button id="x1">hide</button>
+            <button id="x2">show</button>
+        </body>
+    </head>
+</html>
+
+<script>
+    $(document).ready(function(){
+
+        $("#x1").click(function(){
+           $("p").hide();
+        });
+
+        $("#x2").click(function(){
+            $("p").show();
+        })
+        
+    })
+</script>
+
+<!-- 
+    1.Aim: To hide or show the paragraph after pressing button
+    2. write document ready
+    3. give click event to that selector
+    4. then apply .hide method to hide the selector you want to hide
+     in this case we hide the paragraph so thats why we have given "p" in selector
+    5. same for .show method
+ -->

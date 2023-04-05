@@ -1,0 +1,144 @@
+<!--
+1) Create a web application which consists of a Employee Recruitment
+form with following elements using HTML With CSS
+	Employee.html
+Name: 
+Date of Birth:
+Mobile:
+Address:
+Email:
+Extra Educational information: (Defined with message box)
+	Submit button with alert box
+(Note: Give Text Color, Background Color to Form and Assign Pattern to Mandatory Filed)
+
+Validate the data of the form using jquery if the data is valid then display
+the data on details.html
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="x11">
+        <h1>Employee Recruitment Form</h1>
+    </div>
+    <div id="x22">
+        <b>Name :</b>
+        <br>
+        <input type="text" id="x1" required>
+        <br>
+        <br>
+        <b>Date of birth : </b>
+        <br>
+        <input type="date" required>
+        <br>
+        <br>
+        <b>Mobile : </b>
+        <br>
+        <input type="text" id="x2" required>
+        <br>
+        <br>
+        <b> Address : </b>
+        <br>
+        <input type="text" id="x3" required>
+        <br>
+        <br>
+        <b>Email : </b>
+        <br>
+        <input type="text" id="x4" required>
+        <br>
+        <br>
+        <b>Educational Qualification : </b>
+        <br>
+        <!-- <input type="text" id="x5"> -->
+        <textarea name="" id="" cols="42" rows="5"></textarea>
+        <br>
+        <br>
+        <button>Submit</button>
+    </div>
+<footer>
+    <h2>All rights reserved to charles trust pvt ltd.</h2>
+</footer>
+</body>
+</html>
+
+<script>
+        let a = false;
+        let b = false;
+        let c= false;
+        $(document).ready(function (){
+            $("button").click(()=>{
+
+                let regx1 = /^[a-zA-Z ]+$/; 
+                let a = $("#x1").val();
+                if(a.length>7 && regx1.test(a)){
+                    a = true;
+                    console.log("valid name")   
+                }
+                else{
+                    $("#x1").css("border", "2px solid red");
+                }
+
+                let b = $("#x2").val();
+                let regx2 = /^[6-9][0-9]{9}$/
+                if(regx2.test(b)){
+                    b = true;
+                    console.log("valid number")
+                }else{
+                    $("#x2").css("border", "2px solid red");
+                }
+
+                let c = $("#x4").val();
+                let regx3 = /^[A-Za-z0-9_.]+[@][a-zA-Z]+[.][a-zA-Z]+$/;
+                if(regx3.test(c)){
+                    c = true;
+                    console.log("email valid");
+                }else{
+                    $("#x4").css("border", "2px solid red");
+                }
+
+                if(a==true && b==true && c==true){
+                    alert("Your form has been submitted successfully.")
+                }
+            })
+        })
+</script>
+
+<style>
+    
+    footer{
+        text-align: center;
+        border: 1px solid;
+        margin-top: 10px;
+        background-color: lightblue;
+    }
+    #x11{
+        text-align: center;
+        text-transform: uppercase;
+        border: 1px solid;
+        margin-bottom: 10px;
+        background-color: lightblue;
+    }
+    #x22{
+        border: 1px solid;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 500px;
+    }
+    input{
+        /* border-radius: 5px; */
+        width: 300px;
+        height: 20px;
+    }
+    body{
+        background-color: lightcyan;
+    }
+
+
+</style>

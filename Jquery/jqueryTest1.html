@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <p id="x1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat voluptates quo modi quasi eos quis praesentium optio enim ratione ab dicta totam sint et, possimus, hic eligendi quas. Fuga, sunt.</p>
+    </body>
+</html>
+
+<script>
+    $(document).ready(function(){
+        var a = $("#x1").html;
+        console.log(a);
+    })
+</script>
+
+<!-- 
+    1.$(document).ready means that the event will occur after reloading the document first
+    2.here in this example i have stored the html value of id 'x1' in the variable a
+    3. and then showed the html in console
+ -->

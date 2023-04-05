@@ -1,0 +1,48 @@
+<!-- regular expression -->
+
+<script>
+    let s = "India is my country and I live in India."
+    let reg = /India/;
+    // reg = /India/g;
+    // let result = reg.exec(s);
+    // console.log(result);
+    // let result = reg.exec(s,);
+    // console.log(result);
+
+    // let result1 = reg.test(s);
+    // console.log(result1);
+
+    // let result2 = s.match(reg);
+    // console.log(result2);
+
+    // let result3 = s.search(reg);
+    // console.log(result3);
+
+    let result4 = s.replace(reg, "Hindustan")
+    console.log(result4);
+
+</script>
+
+<!-- 
+    1.exec()
+    - this function will return the array if match found in the first occurence
+    - if match not found then null will be returned. 
+    - if you want to search for second occurence then you have to give global flag(g) in reg exp
+    - and then again print it in console.
+
+    2.test()
+    - test() will check the string and serach for the reg 
+    - if reg found then returns true
+    - if not found then returns false
+
+    3.match()
+    - will return array of results of matched elements if found else null. 
+
+    4.search()
+    - search will return the index of element if found
+    - -1 if reg not found.
+
+    5.replace()
+    - here we can replace the regex value with string
+    - if reg is not gl0bal then first occurence of the matched value will be replaced. 
+ -->

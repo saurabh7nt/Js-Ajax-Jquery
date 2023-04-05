@@ -1,0 +1,39 @@
+<script>
+    let x = new Promise((resolve,reject)=>{
+        setTimeout(()=>{
+            resolve("1")
+        },2000)
+    })
+    let x1 = new Promise((resolve,reject)=>{
+        setTimeout(()=>{
+            resolve("2")
+        },2000)
+    })
+    let x2 = new Promise((resolve,reject)=>{
+        setTimeout(()=>{
+            resolve("3")
+            //reject("3");
+        },2000)
+    })
+
+    // let p_all = Promise.all([x,x1,x2]); 
+    // p_settle.then((value)=>{
+    //         console.log(value);
+    //     })
+
+    // let p_settle = Promise.allSettled([x,x1,x2])
+    //     p_settle.then((value)=>{
+    //         console.log(value);
+    //     })
+
+    // let p_race = Promise.race([x,x1,x2])
+    //     p_race.then((value)=>{
+    //         console.log(value);
+    //     })
+
+    // let p_any = Promise.any([x,x1,x2])
+    //     p_any.then((value)=>{
+    //         console.log(value);
+    //     })
+
+</script>

@@ -1,0 +1,23 @@
+<script>
+    // function sum(){
+    //     console.log(arguments);
+    //     let sum =0;
+    //     for(let i in arguments){
+    //         sum += arguments[i];
+    //     }
+    //     console.log(sum);
+    // }
+    // sum(20,30)
+    // sum(20,30,40);
+
+    function sum(name,sub,...args){
+        let sum =0;
+        for(let i in args){
+            sum += args[i];
+        }
+        console.log(`The marks of ${name} in ${sub} is ${sum}`);
+    }
+    sum("saurabh","physics",20,30)
+    sum("vaibhav","physics",20,30,40);
+
+</script>

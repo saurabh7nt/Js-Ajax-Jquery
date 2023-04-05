@@ -1,0 +1,27 @@
+<html>
+    <head>
+    </head>
+    <body>
+        <input type="text" id="x1">
+        <input type="text" id="x2">
+        <button onclick="fun()">enter</button>
+    </body>
+</html>
+
+<script>
+    function fun(){
+       // console.log("working");
+        data1 = document.getElementById("x1").value;
+        data2 = document.getElementById("x2").value;
+        ans = parseInt(data1) + parseInt(data2);
+        // isNaN method will return true if value is not a number
+        if(isNaN(data1) || isNaN(data2) )
+        {
+            console.log("Please enter a number.");
+        }
+        else
+        {
+            console.log(ans);
+        }
+    }
+</script>

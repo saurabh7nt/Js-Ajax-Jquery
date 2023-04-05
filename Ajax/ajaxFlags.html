@@ -1,0 +1,32 @@
+<html>
+    <head></head>
+    <body>
+        <button onclick="fun()">Show Countries</button>
+        <div id="feed"></div>
+    </body>
+</html>
+
+<script>
+    function fun(){
+        let xhttp = new XMLHttpRequest;
+        xhttp.onload = function(){
+            if(this.status==200){
+                console.log("working");
+                let countries = JSON.parse(this.response);
+                console.log(countries);
+                countries.forEach(country => {
+                    const countryCard = document.createElement("div");
+                    const countryCardImage = document.createElement("img");
+                    countryCard.innerHTML = country.name;
+                    countryCardImage.src = country.flag; 
+                    countryCard.appendChild(countryCardImage)
+                    document.getElementById("feed").appendChild(countryCard);
+                });
+            }
+        
+        }
+        xhttp.open("GET","https://restcountries.com/v2/all", true);
+        xhttp.send();
+    }
+    
+</script>

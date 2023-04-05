@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <style>
+            h2,p{
+                width: 300px;
+                border: 1px solid;
+                margin: 0 auto;
+                padding: 10px;
+            }
+        </style>
+    </head>
+        <body onload="hidePara()">
+            <h2 onclick="showPara(this)">Section 1</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam asperiores ex soluta numquam beatae eveniet itaque similique voluptatem commodi nam error, officiis impedit ab est praesentium magni a dolorum esse?</p>
+            <h2 onclick="showPara(this)">Section 2</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam asperiores ex soluta numquam beatae eveniet itaque similique voluptatem commodi nam error, officiis impedit ab est praesentium magni a dolorum esse?</p>
+            <h2 onclick="showPara(this)">Section 3</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam asperiores ex soluta numquam beatae eveniet itaque similique voluptatem commodi nam error, officiis impedit ab est praesentium magni a dolorum esse?</p>
+        </body>
+</html>
+
+<script>
+    function hidePara(){ 
+        let para = document.querySelectorAll("p");
+        for(let i=0;i<para.length;i++){
+            para[i].style.display="none";
+        }
+    }
+    function showPara(curEle){
+            let ans = curEle.nextElementSibling.style.display;
+            hidePara();
+            if(ans=="none"){
+                curEle.nextElementSibling.style.display = "block";
+            }
+            else{
+                curEle.nextElementSibling.style.display = "none";
+            }
+        }
+</script>

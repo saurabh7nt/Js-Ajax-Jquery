@@ -1,0 +1,70 @@
+<!-- strings methods
+    - string is nothing but a sequence of character.
+    length
+    - .length will give you the length of the string
+
+    toLowerCase()
+    - will turn all uppercase values in lowercase
+
+    toUpperCase()
+    - will turn all lowercase values in uppercase
+
+    includes("guns")
+    - will return true if that word is present inside that string
+
+    search
+    - search method will return first occurence of index position of that particular position
+
+    startsWith("I")
+    - this method will return true if string is starting from the word that you sent as a parameer
+      otherwise false.
+    - case sensitive
+    
+    endssWith("I")
+    - this method will return true if string is ending from the word that you sent as a parameer
+    - case sensitive
+
+    match(/in/g)
+    - match method will return the number of words you give as a parameter
+    - 
+    
+    indexOf() & lastIndexOf()
+    -indexOf and lastIndexOf methods will return the index at which the word is present
+    -indexOf will start from the beginning whereas lastIndexOf will start searching from
+     the end.
+
+    replace()
+    -replace function will replace the first parameter with the second parameter ie. the 
+     word which we have sent
+
+    trim()
+    -
+
+-->
+
+ <script>
+    let x = "I got guns in my head and they wont go, spirit in my head and they wont go";
+    // let a = x.length;
+    // document.write(a+"</br></br>");
+    // let a = x.toLowerCase();
+    // document.write(a+"</br></br>");
+    // let a = x.toUpperCase();
+    // document.write(a);
+    // let a = x.includes("guns");
+    // document.write(a);
+    // let a = x.search("guns");
+    // document.write(a);
+    // let a = x.startsWith("I");
+    // document.write(a);
+    // let a = x.endsWith("I");
+    // document.write(a);
+    // let a = x.match(/in/g);
+    // document.write(a);
+    // let a = x.indexOf("in");
+    // document.write(a);
+    // let a = x.lastIndexOf("in");
+    // document.write(a);
+    let a = x.replace("in","out");
+    document.write(a);
+
+    </script>

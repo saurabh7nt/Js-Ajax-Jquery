@@ -1,0 +1,31 @@
+<!-- metachracters in regEx -->
+
+<script>
+    let s = "tera tera tera suroooooooorrrrr..."
+    let reg = /tera/;
+    // reg = /^ter/;    //start with
+    // reg = /...$/;   //ends with
+    // reg = /t.ra/;   //match one character at a time
+    // reg = /t*era/;  //matches one or more character at a time
+    // reg = /tea?rax?/; // question mark after character means that character is optional
+    // reg = /t\*ra/;       // \* means you want to check * in a string 
+    result = reg.exec(s);
+    console.log("The result from exec is ", result);
+
+    if(reg.test(s)){
+        console.log(`The string ${s} matches the regular expression ${reg.source}`)
+    }
+    else{
+        console.log(`The string ${s} does not matches the regular expression ${reg.source}`)
+    }
+</script>
+
+<!-- 
+    
+    1./^(particular literal)/ 
+    - this will check weather the string starts from the particular literal ot not.
+
+    2./(particular literal)$/
+    - expression will be true if string ends with that particular literal otherwise false
+
+ -->

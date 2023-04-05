@@ -1,0 +1,18 @@
+<html>
+    <head></head>
+    <body>
+        <h1 id="x1">Hello</h1>
+        <h1 id="x1">Helloooo</h1>
+        
+        <button onclick="fun()">Enter</button>
+    </body>
+</html>
+
+<script>
+    function fun(){
+        console.log("running");
+        console.log(document);
+        console.log(document.querySelectorAll("#x1"));
+        document.querySelectorAll("#x1")[1].style.background="red";
+        }
+</script>

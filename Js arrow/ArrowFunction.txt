@@ -1,0 +1,25 @@
+Arrow function :
+
+- Arrow function is introduced in ES6.
+- It reduces the syntax of writing the function.
+
+  Before Arrow :
+  let x = function() {
+         console.log("saurabh")
+     }
+    x();
+
+  After Arrow :
+  let x = () => {
+             console.log("arrow");
+     }
+    x();
+
+- If the function has only one statement, and the statement returns a value, you can remove the
+  brackets and the return keyword.
+  Example:
+        hello = () => "Hello World!";
+        
+- If you have parameters, you can pass them inside the parentheses:
+  Example : 
+        hello = (val) => "Hello " + val;

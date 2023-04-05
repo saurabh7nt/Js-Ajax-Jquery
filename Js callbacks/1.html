@@ -1,0 +1,29 @@
+<script>
+    function display(some){
+        console.log("Sum of two numbers are ", some);
+    }
+    function myCalculator(x,y,myCallback){
+        let sum = x + y;
+        myCallback(sum);
+    }
+    myCalculator(5,5,display);
+
+    // console.log("text will be displayed after 3 sec");
+    // function fun(){
+    //     console.log("helllllo ")
+    // }
+    // setTimeout(fun,3000);
+
+    // console.log("text will be displayed in console after 3 secs.");
+    // setTimeout(()=>{fun("Thank you")},3000);
+    // function fun(value){
+    //     console.log(value);
+    // }
+    
+    // function fun(){
+    //     let d = new Date();
+    //     console.log(d.getHours() + ":" + d.getMinutes() + ":" + d.getSeconds()) 
+    // }
+    // setInterval(fun,1000);
+
+</script>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ajaxTest1</title>
+</head>
+<body>
+    <h3 id="demo">Text will change here.</h3>
+    <button onclick="loadMe()">Click here</button>
+</body>
+</html>
+
+<script>
+    function loadMe(){
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function(){
+            if(this.readyState == 4 && this.status == 200) {
+                document.getElementById("demo").innerHTML = this.responseText;
+                console.log(this.readyState);
+                console.log(this);
+            }else if(this.readyState == 4 && this.status == 404)
+            {
+                document.getElementById("demo").innerHTML = "Not found";
+            }
+        };
+        xhttp.open("GET","text1.txt",true);
+        xhttp.send();
+    }
+</script>
+<!-- 
+    1. first i created a html file inside it i have created a h3 tag and a button tag
+        on button tag A onclick event will be fired whenever we will press that button
+    2. later i created a script tag 
+    3. in script tag i first initialize the function which we have created onClick event
+    4. then I have created an object of XMLHttpRequest by using new keyword
+    5. then created an another file named text1.txt which containts the message which will
+       show on screen.
+    6. Created a callback function to demonstrate the change which will appear on screen
+    7. then check the readystate and status by using if else
+    8. in last we have to send request to the server so by using open and send methods we
+        have done that.
+ -->

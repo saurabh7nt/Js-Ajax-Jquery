@@ -1,0 +1,25 @@
+<script>
+    let p = new Promise((resolve,rejected)=>{
+        setTimeout(()=>{
+            resolve("holaaaaaaa");
+        },2000)
+    })
+
+    p.then(()=>{
+        console.log("handler 1");       //this handler will execute first 
+    })
+    p.then(()=>{
+        console.log("handler 2");
+    })
+    p.then(()=>{
+        console.log("handler 3");
+    })
+    p.then(()=>{
+        console.log("handler 4");
+    })
+    p.then(()=>{
+        console.log("handler 5");
+    })
+
+
+</script>

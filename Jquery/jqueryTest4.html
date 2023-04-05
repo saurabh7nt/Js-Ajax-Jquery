@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>  
+    </head>
+    <body>
+        <div id="x1" style="border: solid;">
+            <h3>Key press event</h3>
+        </div>
+    </body>
+</html>
+
+<script>
+    $(document).ready(function(){
+        $("#x1").keydown(function(){
+            console.log("working");
+            $(this).css("background-color","orange");
+        });
+
+        $("#x1").keypress(function(){
+            console.log("working");
+            $(this).css("background-color","red");
+        });
+
+        $("#x1").keyup(function(){
+            console.log("working");
+            $(this).css("background-color","aqua");
+        });
+    });
+    
+</script>
+
+
+<!-- did not work with key press events -->

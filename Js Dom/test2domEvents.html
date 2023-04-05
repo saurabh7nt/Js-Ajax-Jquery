@@ -1,0 +1,22 @@
+<html>
+    <head></head>
+
+        <button id="x1">click and mouse over me</button>
+        <p id="x2">Test</p>
+    
+</html>
+
+<script>
+    btn = document.querySelector("button");
+    // console.log(btn);
+    btn.onclick = function(){
+        document.querySelector("#x2").innerHTML = "hellllllloww";
+    }
+    btn.onmouseover = myFun;    //fun as a refer; not calling
+
+    function myFun(){
+        document.querySelector("#x2").innerHTML = "On mouse over";
+        this.style.border = "2px solid"
+        
+    }
+</script>

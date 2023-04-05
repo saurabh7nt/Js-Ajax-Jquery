@@ -1,0 +1,26 @@
+<!-- some() & every()
+    -some() method will check the each and every element of array and will return true or
+     false as per the condition
+    -in this method you have to create a function which will check the condition
+    -this function will return true even if one of the element passes the condition
+    but
+    in every() method each case must be passed to get the true outcome.
+    -working of every() method is same as some()method except the above difference.
+ -->
+
+ <script>
+    let x = [10,20,18,14];
+    let adult = x.some(check)
+    document.write(adult+"</br></br>");
+
+    let minor=x.every(check1);
+    document.write(minor)
+
+    function check(x){
+        return x>=18;
+    }
+
+    function check1(x){
+        return x<=18;
+    }
+ </script>

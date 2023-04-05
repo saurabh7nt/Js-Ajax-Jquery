@@ -1,0 +1,27 @@
+<!-- map()
+ -->
+
+ <script>
+    let x = [10,20,30,40];
+    let y = x.map(test);
+
+    function test(i){
+        return i/10;
+    }
+
+    document.write(x+"</br>");
+    document.write(y+"</br>");
+    
+    let z = [
+        {fname : "saurabh" , lname : "tajane"},
+        {fname : "sau", lname : "taj"}
+    ]
+
+    let zz = z.map(test2);
+
+    function test2(n){
+        return n.fname + " " + n.lname ;
+    }
+
+    document.write(zz+"</br>");
+ </script>

@@ -1,0 +1,23 @@
+<script>
+
+    // function fun(name, ...z){
+    //     console.log(...z);
+    //     sum = 0;
+    //     for(let i in z){
+    //         sum = sum + z[i];
+    //     }
+    //     console.log( name+" = "+sum);
+    // }
+    // fun("saurabh",...x);
+
+    let x = [10,20,30];
+    let y = [40,50];
+    let z = [...x,...y];
+    console.log(z);
+    let sum = 0;
+    z.forEach((value,i)=>{
+        sum = sum + value;
+    })
+    console.log(sum);
+
+</script>

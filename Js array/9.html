@@ -1,0 +1,22 @@
+<!-- indexof() 
+    -indexof() method will be used to find the index of that particular element.
+    -if you have multiple same elements in an array then indexof() will give you
+     the first occurance of that element
+    -you can also send second parameter as a index to the method so that the search will be
+     start from that index only
+    -if you search for an element which is not present in an array then indexof() method
+     will give you -1.
+
+    lastindexof()
+    -lastIndexOf() works the same as indexOf method the only difference is that this method
+    will start searching the element from the last.
+-->
+<script>
+    let x = ["saurabh","sau","rabh","sau","tajane"];
+ //   let b = x.indexOf("sau")      //1
+    let b = x.indexOf("sau",3);
+    document.write(b+"</br>");
+
+    let c = x.lastIndexOf("saurabh");
+    document.write(c)
+</script>

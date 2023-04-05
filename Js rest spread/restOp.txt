@@ -1,0 +1,17 @@
+Rest operator :
+- Rest operator will break the rest of the elements into an array to perform certain actions on
+  it.
+- Rest operator is always use at the end of the formal arguments.
+
+
+Spread operator :
+- Spread operator is exactly opposite to the rest operator
+- It breaks the array into each individual element so that we can perform certain actions on it.
+- It is also possible to concatenate two arrays into one array with the help of spread operator.
+- Example:
+            let x = [10,20,30];
+            let y = [40,50];
+            let z = [...x,...y];
+            let z = [0,...x,...y,60,70,80]; 
+- It is also possible to add elements into new array. 
+

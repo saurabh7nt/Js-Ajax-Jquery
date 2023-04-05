@@ -1,0 +1,16 @@
+<input type="text" id="x1" placeholder="float1">
+<input type="text" name="" id="x2" placeholder="float2">
+<br>
+<button onclick="fun()">enter</button>
+<p></p>
+<script>
+    function fun(){
+        console.log("working");
+        data1 = document.querySelector("#x1").value;
+        data2 = document.querySelector("#x2").value;
+        ans = parseFloat(data1) + parseFloat(data2);
+        console.log(ans);
+        console.log(ans.toFixed(2));
+        document.querySelector("p").innerHTML = ans;
+    }
+</script>

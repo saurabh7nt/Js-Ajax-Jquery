@@ -1,0 +1,35 @@
+<html>
+    <head></head>
+    <body>
+        <img src="https://www.wikipedia.org/portal/wikipedia.org/assets/img/Wikipedia-logo-v2@1.5x.png" width="300" height="250px" alt="">
+        <button onclick="hasAttri()">has</button>
+        <button onclick="getAttri()">get</button>
+        <button onclick="setAttri()">set</button>
+        <button onclick="remAttri()">remove</button>
+    </body>
+</html>
+
+<script>
+    function hasAttri(){
+        console.log("working");
+        ans = document.querySelector("img").hasAttribute("width");
+        console.log(ans);
+    }
+    function getAttri(){
+        console.log("working");
+        ans = document.querySelector("img").getAttribute("width");
+        console.log(ans);
+    }
+    function setAttri(){
+        console.log("working");
+        ans = document.querySelector("img").setAttribute("width","100px");
+        console.log(ans);
+    }
+    function remAttri(){
+        console.log("working");
+        ans = document.querySelector("img").removeAttribute("src");
+        console.log(ans);
+    }
+
+
+</script>

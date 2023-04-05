@@ -1,0 +1,11 @@
+<script>
+    function fun(name,sub,...marks){
+        let sum = 0;
+        for(let i in marks){
+            sum = sum + marks[i];
+        }
+        console.log(`the marks obtained to student ${name} in ${sub} is ${sum}.`);
+        
+    }
+    fun("saurabh","physics",10,20,30);
+</script>

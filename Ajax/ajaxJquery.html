@@ -1,0 +1,27 @@
+<html>
+    <head></head>
+    <body>
+        <div>
+            <h1>Click to get greet.</h1>
+            <p></p>
+            <button onclick="loadMe()">Click</button>
+        </div>
+    </body>
+</html>
+
+<script>
+    function loadMe(){
+        console.log("working");
+        let xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function(){
+        if(this.status == 200 && this.readyState == 4){
+            console.log("working");
+           document.querySelector("p").innerText = this.responseText;
+        }else{
+           document.querySelector("p").innerText = "File not found.";
+        }
+    }
+        xhttp.open("GET","text4.txt",true);
+        xhttp.send();
+    }
+</script>

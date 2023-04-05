@@ -1,0 +1,62 @@
+<!-- character sets and quantifiers -->
+
+<script>
+    let s = "I am in love with the shape of you"
+
+    let reg = /shape/;
+    // reg = /s[a-z]ape/;
+    // reg = /s[a-zA-Z]ape/;
+    // reg = /s[0-9]ape/;
+    // reg = /s[^a-z]ape/;
+    // reg = /s[^abch]ape/;
+    // reg = /s[ghi]ap[^def]/;
+
+    //quantifiers
+
+    // reg = /sh{2}ape/;
+    // reg = /sh{0,2}ape/;
+
+    // groupings
+
+    reg = /(sh){2}ape/;
+
+    let result = reg.exec(s);
+    console.log("The result of exec will show here :", result);
+    
+    if(reg.test(s)){
+        console.log(`The string ${s} matches the ${reg.source}`);
+    }
+    else{
+        console.log(`The string ${s} does not matches the ${reg.source}`);
+    }
+</script>
+
+<!-- 
+    for character sets we use [] 
+    [a-z]
+    - this allows all the character from a to z in lowercase
+    [A-Z]
+    - this charset allow the character from A to Z in uppercase
+    [0-9]
+    - all numeric values between 0-9 are acceptable
+    [^a-z]
+    - here ^ means that values between a-z are not allowed
+    [^abch]
+    - any value without these abch are acceptable
+    -you can have as many charset in an expression as many you want
+
+    for quantifiers we use {}
+    
+    - quantifier means number of times the character can repeat/occur 
+    
+    h{2}
+    - here letter h can occur exact 2 times....nor less non more
+    h{0,2}
+    - here letter can occur from 0 to 2 times.
+
+    for grouping we use ()
+
+    (sh){2}
+    -here sh can occur exactly 2 times
+
+-->

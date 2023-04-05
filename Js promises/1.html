@@ -1,0 +1,17 @@
+<script>
+    const myPromise = new Promise(function(resolve,reject){
+        let x = 0;
+        if(x==0){
+            resolve("Promise fulfilled.")
+        }
+        else{
+            reject("You expected a lot from this person.")
+        }
+    })
+    myPromise.then(function(value){
+        console.log(value);
+    })
+    myPromise.catch(function(value){
+        console.log(value);
+    })
+</script>

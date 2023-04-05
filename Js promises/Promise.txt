@@ -1,0 +1,14 @@
+Promise:
+-promise in js works same as promise in real world
+-let me give you an analogy
+-suppose you got a call from your friend and you promise that person to meet on this weekend
+ so here there are two chances, either the promise will get fulfilled or it will get rejected.
+-same in this case
+-promise is special function where we can give two parameters
+ as resolve or rejected.
+-we have to handle both conditions,,,if promise get resolved
+....and also if the promise get rejected.
+
+To handle these there are two methods :
+1) .then (if promise get resolved)
+2) .catch (if promise get rejected)

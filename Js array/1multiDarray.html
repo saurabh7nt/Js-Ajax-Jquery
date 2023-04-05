@@ -1,0 +1,20 @@
+<script>
+    let x = [
+        ["name","age","gender","education"],
+        ["saurabh",18,"male","b.tech"],
+        ["vaibhav", 12, "female", "b.tech"]
+    ]
+    document.write("<table border='1px' cellspacing='0'>")
+
+    for(let i = 0; i<x.length; i++)
+    {
+        document.write("<tr>");
+        for(let j = 0; j<x[i].length; j++)
+        {
+             document.write("<td>"+x[i][j]+"</td>");
+        }
+        document.write("</tr>");
+    }
+
+    document.write("</table>");
+</script>

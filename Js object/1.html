@@ -1,0 +1,32 @@
+<!-- Js object
+    - just like arrays are enclosed within square bracket [] objects are enclosed withind curly 
+      braces {}.
+    - object properties should be initialized like ( name : property ).
+    - to access object elements you have to use '.' with name of the property
+    - it is possible to create array and functions inside object
+    - this is used to select the current object.
+-->
+
+<script>
+    let x = {
+        fName : "Saurabh",
+        lName : "Tajane",
+        age : 19,
+        place : "Peace",
+        favMovies : ["shawshank","ludo"],
+        salary : function(){
+            return 120000;
+        },
+        fullname : function(){
+            return (this.fName +" "+ this.lName); 
+        }
+    }
+
+    console.log(x);
+    console.log(x.age);
+    console.log(x.favMovies[1]);
+    console.log(x.salary());
+    console.log(x.fullname());
+
+
+</script>

@@ -1,0 +1,34 @@
+<script>
+  
+    let p1 = new Promise(function(resolve,reject){
+        console.log("promise pending of p1");
+        setTimeout(() => {
+            console.log("p1 fulfilled the promise")
+            resolve(true)
+        }, 3000);   
+    })
+
+    let p2 = new Promise(function(resolve,reject){
+        console.log("promise pending of p2");
+        setTimeout(() => {
+            console.log("p2 did not fulfilled the promise")
+             reject(true);           
+         //  resolve(true);       //THIS LINE WILL NOT WORK
+        }, 3000);    
+    })
+
+     p1.then((value)=>{
+        console.log(value);
+     })
+
+    //  p2.catch((error)=>{
+    //     console.log(error);
+    //  }) 
+    
+    p2.then((value)=>{
+        console.log("RESOLVED " +value);
+    },(error)=>{
+        console.log("REJECTED "+error);
+    })
+    
+</script>
